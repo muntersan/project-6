@@ -115,4 +115,48 @@ a:hover {
   overflow: auto;
 }
 
+.sidebar {
+  padding: 3rem 4rem 4rem 4rem;
+  display: grid;
+}
+.sidebar__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.sidebar__back {
+  font-size: var(--font-size-small);
+}
+
+.product-sidebar__title {
+  margin: 0 0 1rem 0;
+  font-size: var(--font-size-4);
+}
+.product-sidebar__price {
+  font-size: var(--font-size-4);
+  font-weight: 700;
+}
+
+.add-to-cart {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: var(--font-size-1);
+  padding: 1.5rem 3rem;
+}
+.add-to-cart:hover {
+  background-color: var(--color-grey-400);
+}
+
 /*# sourceMappingURL=style.css.map */
