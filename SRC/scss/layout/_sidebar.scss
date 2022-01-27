@@ -1,0 +1,37 @@
+@use '../components/buttons' as button;
+
+.sidebar {
+    padding: 3rem 4rem 4rem 4rem;
+    display: grid;
+    
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__back {
+        font-size: var(--font-size-small);
+    }
+}
+
+//product sidebar
+
+.product-sidebar {
+
+    &__title {
+        margin: 0 0 1rem 0;
+        font-size: var(--font-size-4);
+    }
+
+    &__price {
+        font-size: var(--font-size-4);
+        font-weight: 700;
+    }
+}
+
+.add-to-cart {
+    @include button.standard($border-radius: 50px, $size: large);
+}
