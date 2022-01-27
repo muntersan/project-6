@@ -29,7 +29,7 @@
   --page-padding: 30px;
   --content-width: 55rem;
   --content-width-small: 40rem;
-  --menu-height: 100px;
+  --menu-height: 110px;
   --grid-container: minmax(var(--page-padding), 1fr) [inner-start] minmax(0,var(--page-width)) [inner-end] minmax(var(--page-padding), 1fr);
   --grid-content: repeat(12, 1fr);
 }
@@ -78,6 +78,14 @@ h6 {
 p, a, li {
   line-height: 1.5;
   font-family: var(--font-serif);
+}
+
+.container {
+  display: grid;
+}
+
+.sidebar {
+  background-color: var(--color-grey-100);
 }
 
 /*# sourceMappingURL=style.css.map */
