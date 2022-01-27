@@ -1,0 +1,19 @@
+.container {
+    display: grid;
+    height: 100vh;
+    overflow: hidden;
+    grid-template-columns: 350px 1fr;
+    
+
+}
+
+.sidebar {
+    background-color: var(--color-grey-100);
+}
+
+.content {
+    background-color: var(--color-grey-200);
+    overflow: auto;
+
+    
+}
