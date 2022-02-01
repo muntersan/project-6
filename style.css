@@ -134,9 +134,97 @@ a:hover {
   margin: 0 0 1rem 0;
   font-size: var(--font-size-4);
 }
+.product-sidebar__subtitle {
+  font-size: var(--font-size-small);
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  color: var(--color--grey-400);
+  font-weight: 700;
+}
 .product-sidebar__price {
   font-size: var(--font-size-4);
   font-weight: 700;
+}
+.product-sidebar__colors {
+  margin-top: 5rem;
+}
+.product-sidebar__quantity {
+  margin-top: 4rem;
+}
+
+.colors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.colors__item {
+  margin-right: 7px;
+}
+.colors__item:last-of-type {
+  margin-right: 0;
+}
+.colors__item--active button {
+  opacity: 1;
+}
+.colors__button {
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light);
+  background-color: var(--color--grey-200);
+  opacity: 0.4;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+.colors__button:hover {
+  opacity: 1;
+}
+.colors__button--yellow {
+  background-color: #eeb826;
+}
+.colors__button--green {
+  background-color: #06a07d;
+}
+.colors__button--pink {
+  background-color: #d80cb8;
+}
+.colors__button--red {
+  background-color: #ff0000;
+}
+
+.quantity__input {
+  background-color: var(--color-grey-200);
+  font-size: var(--font-size-1);
+  font-weight: 700;
+  color: var(--color-light);
+  padding: 0.5rem 1rem;
+  border: 0;
+  font-family: var(--font-sans);
+  border-radius: 0;
+}
+.quantity__less {
+  background-color: var(--color-grey-200);
+  font-size: var(--font-size-1);
+  font-weight: 700;
+  color: var(--color-grey-400);
+  padding: 0.5rem 1rem;
+  border: 0;
+  font-family: var(--font-sans);
+  border-radius: 30px 0 0 30px;
+}
+.quantity__more {
+  background-color: var(--color-grey-200);
+  font-size: var(--font-size-1);
+  font-weight: 700;
+  color: var(--color-grey-400);
+  padding: 0.5rem 1rem;
+  border: 0;
+  font-family: var(--font-sans);
+  border-radius: 0 30px 30px 0;
 }
 
 .add-to-cart {
