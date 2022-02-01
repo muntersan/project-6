@@ -26,7 +26,7 @@
   --gap-large: 3rem;
   --gap-xl: 4rem;
   --page-width: 78rem;
-  --page-padding: 30px;
+  --page-padding: 3rem;
   --content-width: 55rem;
   --content-width-small: 40rem;
   --menu-height: 110px;
@@ -97,6 +97,54 @@ a {
 }
 a:hover {
   color: var(--color-light);
+}
+
+.header {
+  height: var(--menu-height);
+  display: grid;
+  grid-template-columns: var(--grid-container);
+}
+.header__inner {
+  grid-column: inner;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.cart {
+  background-color: var(--color-grey-300);
+  color: var(--color-light);
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  border: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  font-size: var(--font-size-small);
+  position: relative;
+}
+.cart:hover {
+  background-color: var(--color-grey-400);
+}
+.cart__counter {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-accent);
+  border-radius: 50px;
+  line-height: 24px;
+  text-align: center;
+  right: 0;
+  bottom: -11px;
 }
 
 .container {
@@ -236,15 +284,59 @@ a:hover {
   font-family: var(--font-sans);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
-  font-weight: 600;
   border: 0;
   cursor: pointer;
   white-space: nowrap;
+  font-weight: 600;
   font-size: var(--font-size-1);
   padding: 1.5rem 3rem;
 }
 .add-to-cart:hover {
   background-color: var(--color-grey-400);
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.menu__item {
+  margin-right: var(--gap-large);
+}
+.menu__item:last-of-type {
+  margin-right: 0;
+}
+
+.menu-button {
+  width: 21px;
+  height: 21px;
+  position: relative;
+  padding: 0;
+  border: 0;
+  display: block;
+  background: none;
+  margin-left: 2rem;
+}
+.menu-button__hamburger {
+  background-color: var(--color-grey-400);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu-button__hamburger::before, .menu-button__hamburger::after {
+  content: "";
+  background-color: var(--color-grey-400);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+.menu-button__hamburger::after {
+  top: -7px;
 }
 
 /*# sourceMappingURL=style.css.map */

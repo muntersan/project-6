@@ -1,0 +1,42 @@
+@use '../components/buttons' as button;
+
+.header {
+    height: var(--menu-height);
+    display: grid;
+    grid-template-columns: var(--grid-container);
+
+    &__inner {
+        grid-column: inner;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+.cart {
+    @include button.standard (
+        $background: var(--color-grey-300), 
+        $border-radius: 50px,);
+        position: relative;
+
+
+        &__counter {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: var(--color-accent);
+            border-radius: 50px;
+            line-height: 24px;
+            text-align: center;
+            right: 0;
+            bottom: -11px;
+           
+        }
+
+}
