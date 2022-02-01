@@ -1,4 +1,6 @@
 @use '../components/buttons' as button;
+@use '../tools/colors' as color;
+@use '../components/form';
 
 .sidebar {
     padding: 3rem 4rem 4rem 4rem;
@@ -15,6 +17,8 @@
     &__back {
         font-size: var(--font-size-small);
     }
+
+
 }
 
 //product sidebar
@@ -26,10 +30,106 @@
         font-size: var(--font-size-4);
     }
 
+    &__subtitle {
+        font-size: var(--font-size-small);
+        font-family: var(--font-sans);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing);
+        color: var(--color--grey-400);
+        font-weight: 700;
+    }
+
     &__price {
         font-size: var(--font-size-4);
         font-weight: 700;
     }
+
+    &__colors {
+        margin-top: 5rem;
+    }
+
+    &__quantity {
+        margin-top: 4rem;
+    }
+}
+
+.colors {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+
+    &__item {
+        margin-right: 7px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &--active {
+            button {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__button {
+        display: block;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 2px solid var(--color-light);
+        background-color: var(--color--grey-200);
+        opacity: 0.4;
+        transition: opacity 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &--yellow {
+            background-color: color.$yellow;
+        }
+
+        &--green {
+            background-color: color.$green;
+        }
+
+        &--pink {
+            background-color: color.$pink;
+        }
+
+        &--red {
+            background-color: color.$red;
+        }
+    }
+}
+
+.quantity {
+     &__form{
+
+     }
+
+     &__input{
+         @include form.input();
+     }
+
+     &__less {
+         @include form.input(
+             $border-radius: 30px 0 0 30px, 
+             $color: var(--color-grey-400)
+             );
+     }
+
+     &__more{
+         @include form.input(
+             $border-radius: 0 30px 30px 0, 
+             $color: var(--color-grey-400)
+             );
+     }
 }
 
 .add-to-cart {
