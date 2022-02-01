@@ -15,7 +15,6 @@
     font-family: var(--font-sans);
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing);
-    font-weight: 600;
     border: 0;
     cursor: pointer;
     white-space: nowrap;
@@ -25,9 +24,11 @@
     }
     
     @if $size == small {
+        font-weight: 700;
         padding: 1rem 2rem;
         font-size: var(--font-size-small);
     } @else {
+        font-weight: 600;
         font-size: var(--font-size-1);
         padding: 1.5rem 3rem;
     }
