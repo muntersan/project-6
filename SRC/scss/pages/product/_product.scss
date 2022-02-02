@@ -39,5 +39,30 @@
         &-slide {
             overflow: hidden;
         }
+
+        &-pagination {
+            text-align: left;
+            left: var(--gap-large);
+            bottom: 0;
+
+            --swiper-pagination-bullet-size: 11px;
+            --swiper-pagination-bullet-inactive-color: var(--color-grey-100) ;
+            --swiper-pagination-bullet-inactive-opacity: 1;
+            --swiper-pagination-color: var(--color-light) ;
+        }
+
+        &__arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-70px);
+            left: var(--gap-large);
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        &__arrow--next {
+            left: auto;
+            right: var(--gap-large);
+        }
     }
 }

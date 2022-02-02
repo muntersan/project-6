@@ -177,6 +177,12 @@ a:hover {
 }
 .sidebar__back {
   font-size: var(--font-size-small);
+  position: absolute;
+  left: var(--gap-large);
+  max-width: 300px;
+}
+.sidebar__back svg {
+  margin-right: 0.5rem;
 }
 
 .product-sidebar__title {
@@ -218,6 +224,15 @@ a:hover {
 .colors__item--active button {
   opacity: 1;
 }
+.colors__item--active button::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 12px;
+  background: url(assets/icons/icon-checkmark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .colors__button {
   display: block;
   height: 40px;
@@ -254,6 +269,14 @@ a:hover {
   border: 0;
   font-family: var(--font-sans);
   border-radius: 0;
+  text-align: center;
+}
+.quantity__input::-webkit-outer-spin-button, .quantity__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.quantity__input[type=number] {
+  -moz-appearance: textfield;
 }
 .quantity__less {
   background-color: var(--color-grey-200);
@@ -265,6 +288,13 @@ a:hover {
   font-family: var(--font-sans);
   border-radius: 30px 0 0 30px;
 }
+.quantity__less::-webkit-outer-spin-button, .quantity__less::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.quantity__less[type=number] {
+  -moz-appearance: textfield;
+}
 .quantity__more {
   background-color: var(--color-grey-200);
   font-size: var(--font-size-1);
@@ -274,6 +304,13 @@ a:hover {
   border: 0;
   font-family: var(--font-sans);
   border-radius: 0 30px 30px 0;
+}
+.quantity__more::-webkit-outer-spin-button, .quantity__more::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.quantity__more[type=number] {
+  -moz-appearance: textfield;
 }
 
 .add-to-cart {
@@ -375,6 +412,27 @@ a:hover {
 }
 .product .swiper-slide {
   overflow: hidden;
+}
+.product .swiper-pagination {
+  text-align: left;
+  left: var(--gap-large);
+  bottom: 0;
+  --swiper-pagination-bullet-size: 11px;
+  --swiper-pagination-bullet-inactive-color: var(--color-grey-100) ;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-color: var(--color-light) ;
+}
+.product .swiper__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-70px);
+  left: var(--gap-large);
+  z-index: 2;
+  cursor: pointer;
+}
+.product .swiper__arrow--next {
+  left: auto;
+  right: var(--gap-large);
 }
 
 /*# sourceMappingURL=style.css.map */
