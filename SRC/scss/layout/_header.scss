@@ -4,6 +4,7 @@
     height: var(--menu-height);
     display: grid;
     grid-template-columns: var(--grid-container);
+    position: fixed;
 
     &__inner {
         grid-column: inner;

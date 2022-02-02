@@ -103,6 +103,7 @@ a:hover {
   height: var(--menu-height);
   display: grid;
   grid-template-columns: var(--grid-container);
+  position: fixed;
 }
 .header__inner {
   grid-column: inner;
@@ -337,6 +338,20 @@ a:hover {
 }
 .menu-button__hamburger::after {
   top: -7px;
+}
+
+.product {
+  height: 100vh;
+  display: grid;
+  width: 100%;
+}
+.product__inner {
+  display: grid;
+  background-color: lightblue;
+  margin-top: var(--menu-height);
+}
+.product .swiper {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
