@@ -104,6 +104,7 @@ a:hover {
   display: grid;
   grid-template-columns: var(--grid-container);
   position: fixed;
+  z-index: 999;
 }
 .header__inner {
   grid-column: inner;
@@ -400,12 +401,20 @@ a:hover {
   text-transform: uppercase;
   color: var(--color-grey-100);
   text-align: center;
+  opacity: 0.6;
 }
 .product__image {
   position: relative;
 }
 .product__image img {
   max-height: 80vh;
+}
+.product__share {
+  position: absolute;
+  right: var(--gap-large);
+  bottom: var(--gap-xl);
+  font-size: var(--font-size-small);
+  z-index: 2;
 }
 .product .swiper {
   width: 100%;
