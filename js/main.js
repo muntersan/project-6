@@ -1,6 +1,7 @@
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,
+    parallax: true,
   
     // If we need pagination
     pagination: {

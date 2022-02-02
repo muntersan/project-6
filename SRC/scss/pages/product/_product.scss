@@ -2,14 +2,42 @@
     height: 100vh;
     display: grid;
     width: 100%;
+    position: relative;
 
     &__inner {
         display: grid;
-        background-color: lightblue;
         margin-top: var(--menu-height);
+        margin-bottom: var(--gap-xl);
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__bgtext {
+        position: absolute;
+        font-size: 7.5vw;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--color-grey-100);
+        text-align: center;
+    }
+
+    &__image {
+        position: relative;
+
+        img {
+            max-height: 80vh;
+        }
     }
 
     .swiper {
         width: 100%;
+
+        &-slide {
+            overflow: hidden;
+        }
     }
 }

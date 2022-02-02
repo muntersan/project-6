@@ -344,14 +344,37 @@ a:hover {
   height: 100vh;
   display: grid;
   width: 100%;
+  position: relative;
 }
 .product__inner {
   display: grid;
-  background-color: lightblue;
   margin-top: var(--menu-height);
+  margin-bottom: var(--gap-xl);
+}
+.product__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product__bgtext {
+  position: absolute;
+  font-size: 7.5vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-grey-100);
+  text-align: center;
+}
+.product__image {
+  position: relative;
+}
+.product__image img {
+  max-height: 80vh;
 }
 .product .swiper {
   width: 100%;
+}
+.product .swiper-slide {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
